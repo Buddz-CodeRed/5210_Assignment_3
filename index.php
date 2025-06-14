@@ -27,10 +27,8 @@
         ?>
         
         <!--start for cards on home page-->
-        <div class='card-wrapper'>
-            
-            <div class='flex-container'>
-                
+        <div class='card-wrapper'>            
+            <div class='flex-container'>                
                 <!--iterates through database-->
                 <?php for ($i = 0; $i < count($scp_records); $i++): 
                     $scp = $scp_records[$i];
