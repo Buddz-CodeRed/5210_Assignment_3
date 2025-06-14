@@ -1,0 +1,202 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 4vw; /* base mobile font size */
+}
+
+/* Background image */
+.bg_image {
+    background-image: url("https://images.unsplash.com/photo-1637055159652-2b8837731f00?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100%;
+}
+
+.create-btn {
+    color: red;
+    font-size: 5rem;
+    margin-right: 20px;
+}
+
+/* Container */
+.top-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100vw;
+    padding: 20px;
+}
+
+.logo_h2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: auto;
+    margin-left: auto;
+}
+
+/* Logo */
+.logo {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    transform: translateY(7px);
+}
+.top-wrapper a:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    text-decoration: none;
+    font-size: 2rem;
+    transform: translateY(-10px);
+}
+
+/* Card layout */
+.card-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 6rem 0 2rem 0;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;;
+}
+
+/* Detail cards */
+.cards {
+    background-size: cover;        /* or 'cover' if you want it to fill the card */
+    background-position: center;     /* center the image in the card */
+    background-repeat: no-repeat;
+    width: 300vw;
+    max-width: 90vw;
+    height: auto;
+    max-height: 90vh;
+    border-radius: 12px;
+    overflow-y: auto;
+    backdrop-filter: blur(5px) saturate(197%);
+    -webkit-backdrop-filter: blur(5px) saturate(197%);
+    background-color: rgba(17, 25, 40, 0.56);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.card::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    background: inherit;
+    filter: blur(40px) saturate(400%);
+    z-index: -1;
+}
+
+.alert {
+    text-align: center;
+}
+
+/* Image container */
+.scp-image-container {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Button style */
+.btn-outline-secondary {
+    border-width: 3px;
+}
+
+/* ======================== */
+/* Media Queries for Layout */
+/* ======================== */
+@media (min-width: 270px) {
+    html { font-size: 3.5vw; }
+    .cards { width: 320px; height: 200px; }
+    .logo { height: 70px; }
+    .top-wrapper a:nth-child(2){
+        transform: translateY(-12px);
+    }
+}
+
+@media (min-width: 576px) {
+    html { font-size: 3.5vw; }
+    .cards { width: 320px; height: 200px; }
+    .logo { height: 50px; }
+}
+
+@media (min-width: 768px) {
+    html { font-size: 2.5vw; }
+    .card-wrapper { gap: 30px; padding: 8rem 0 3rem 0; }
+    .logo { height: 60px; }
+}
+
+@media (min-width: 992px) {
+    html { font-size: 2vw; }
+    .cards { width: 340px; height: 220px; }
+    .logo { height: 70px; }
+}
+
+@media (min-width: 1200px) {
+    html { font-size: 1.5vw; }
+    .cards { width: 360px; height: 240px; }
+    .logo { height: 80px; }
+    .card-wrapper { gap: 50px; padding-top: 10rem; }
+}
+
+@media (min-width: 1400px) {
+    html { font-size: 1.25vw; }
+    .cards { width: 400px; height: 260px; }
+    .logo { height: 90px; }
+    .card-body h1 { font-size: 3rem; }
+    .card-body h3 { font-size: 2rem; }
+    .card-body p { font-size: 1.25rem; }
+    .alert { max-width: 600px; font-size: 1.1rem; }
+    .offcanvas-bg {width: 350px;}
+}
+
+@media (min-width: 1600px) {
+    html { font-size: 1.05vw; }
+    .cards { width: 650px; height: 480px; }
+    .logo { height: 170px; }
+    .card-body h1 { font-size: 2rem; }
+    .card-body h3 { font-size: 1rem; }
+    .card-body p { font-size: 0.25rem; }
+    .alert { max-width: 600px; font-size: 1.1rem; }
+    .offcanvas-bg {width: 350px;}
+}
+
+@media (min-width: 1920px) {
+  .offcanvas.offcanvas-end {
+    width: 190px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .offcanvas.offcanvas-end {
+    width: 200px;
+  }
+}
+
+
+@media (min-width: 3840px) {
+    html { font-size: 0.65vw; }
+    .logo { height: 220px; }
+    .offcanvas.offcanvas-end {width: 340px;}
+}
